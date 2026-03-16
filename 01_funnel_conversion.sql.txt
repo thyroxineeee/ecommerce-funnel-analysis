@@ -1,0 +1,13 @@
+SQL-запрос для воронки
+query = """
+WITH funnel AS (
+    SELECT 
+        COUNT(DISTINCT CASE WHEN event_type = 'visit' THEN user_id END) AS visitors,
+        COUNT(DISTINCT CASE WHEN event_type = 'view_item' THEN user_id END) AS viewers,
+        COUNT(DISTINCT CASE WHEN event_type = 'add_to_cart' THEN user_id END) AS cart_adders,
+        COUNT(DISTINCT CASE WHEN event_type = 'checkout' THEN user_id END) AS checkouts,
+        COUNT(DISTINCT CASE WHEN event_type = 'purchase' THEN user_id END) AS buyers
+    FROM events_clean
+)
+SELECT * FROM funnel;
+"""
