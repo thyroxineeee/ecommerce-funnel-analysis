@@ -39,7 +39,7 @@
 ## Структура репозитория
 - data/events.csv — исходные данные
 - notebooks/01_eda_and_funnel.ipynb — ноутбук с анализом данных
-- sql_requests/01_funnel_conversion.sql — SQL-запрос для расчёта воронки
+- sql_requests/01_funnel_conversion.sql — SQL-запросы для расчёта воронки и сегментного анализа
 - dashboard/dashboard_main_top.png — верхняя часть дашборда
 - dashboard/dashboard_main_bottom.png — нижняя часть дашборда
 
